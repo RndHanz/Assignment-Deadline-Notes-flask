@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Catatan Deadline Tugas</title>
+  </head>
+  <body>
+    <h1>Catatan Deadline Tugas</h1>
+    <form method="POST" action="/add">
+      <input type="text" name="title" placeholder="Nama Tugas" required />
+      <input type="date" name="deadline" required />
+      <button type="submit">Tambah</button>
+    </form>
+    <ul>
+      {% for task in tasks %}
+      <li>{{ task.title }} - Deadline: {{ task.deadline }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
